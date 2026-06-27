@@ -24,8 +24,6 @@ run_training --[training configurations]
 
 ```
 
-*Replace `DATASET_ID`, `CONFIGURATION`, and `FOLD` with your specific parameters.*
-
 ### 2. Inference
 
 The inference script is designed to handle large volumetric data and provides advanced
