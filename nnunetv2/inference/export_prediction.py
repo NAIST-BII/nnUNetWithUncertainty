@@ -100,7 +100,8 @@ def export_prediction_from_logits(predicted_array_or_file: Union[np.ndarray, tor
                                   plans_manager: PlansManager,
                                   dataset_json_dict_or_file: Union[dict, str], output_file_truncated: str,
                                   save_probabilities: bool = False,
-                                  save_entropy: bool = False):
+                                  save_entropy: bool = False,
+                                  num_classes = 23):
     # if isinstance(predicted_array_or_file, str):
     #     tmp = deepcopy(predicted_array_or_file)
     #     if predicted_array_or_file.endswith('.npy'):
@@ -150,8 +151,7 @@ def export_prediction_from_logits(predicted_array_or_file: Union[np.ndarray, tor
                  properties_dict)
         with open(output_file_truncated+'_entropy_summary.csv', 'w') as ff:
             uncerts = []
-            # for n in range(1, 23):
-            for n in range(1, 23):
+            for n in range(1, num_classes+1):
                 uncerts.append(get_mean_uncert(segmentation_final, entropy_final/1e4, n))
             ff.write(','.join(str(k) for k in [os.path.basename(os.path.dirname(output_file_truncated)), *uncerts, '\n']))
 
