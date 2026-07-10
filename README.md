@@ -1,6 +1,6 @@
 # Torso MSK Segmentation
 
-This repository contains a modified version of the [nnU-Net](https://github.com/MIC-DKFZ/nnUNet) framework, 
+This repository contains MSKSegmenter codes, including a modified version of the [nnU-Net](https://github.com/MIC-DKFZ/nnUNet) framework, 
 specifically tailored for the segmentation of the torso using Musculoskeletal (MSK) datasets.
 
 ![Torso MSK Segmentation Pipeline](assets/fig.png)
