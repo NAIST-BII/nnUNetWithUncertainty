@@ -1,4 +1,4 @@
-# Torso MSK Segmentation
+# 3D MSKSegmenter (3D MS)
 
 This repository contains MSKSegmenter codes, including a modified version of the [nnU-Net](https://github.com/MIC-DKFZ/nnUNet) framework, 
 specifically tailored for the segmentation of the torso using Musculoskeletal (MSK) datasets.
